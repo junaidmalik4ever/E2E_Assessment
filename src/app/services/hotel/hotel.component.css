@@ -1,0 +1,24 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Restaurant } from '../Models/restaurant';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class RestroService {
+
+  url: string = "  http://localhost:4200/Hotels";
+ 
+  selectedItems : Hotels] = [];
+  constructor(private http: HttpClient) {}
+
+  public getAllMenu() : Observable<Hotels[]> {
+    return this.http.get<Hotels[]>(this.url);
+  }
+
+ 
+
+ 
+
+}
